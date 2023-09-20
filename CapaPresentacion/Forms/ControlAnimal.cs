@@ -40,5 +40,19 @@ namespace CapaPresentacion.Forms
             IngresoAnimal ventanaIngreso = new IngresoAnimal(this);
             ventanaIngreso.Visible = true;
         }
+
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                EditarAnimal ventanaEditar = new EditarAnimal(this, "MEME", new DateTime(1992, 3, 21), "H", true);
+                this.Visible = false;
+                ventanaEditar.Visible = true;
+
+                //TODO: traer datos del data grid view
+            }
+            catch { }
+
+        }
     }
 }

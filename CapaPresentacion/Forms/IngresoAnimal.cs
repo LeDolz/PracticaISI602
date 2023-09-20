@@ -35,8 +35,20 @@ namespace CapaPresentacion.Forms
         {
 
             //verificar el radiobutton
-            Form popup = new Form();
+
+            IngresoAnimal popup = new IngresoAnimal(this);
+
+            if (radioButtonAnimalHembraIngreso.Checked)
+            {
+                popup.labelTituloIngreso.Text = "Hembra";
+            }
+            else if(radioButtonAnimalMachoIngreso.Checked)
+            {
+                popup.labelTituloIngreso.Text = "macho";
+            }
             
+
+
             popup.ShowDialog();
         }
     }
