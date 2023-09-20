@@ -11,3 +11,4 @@ C:\Users\Degol\source\repos\CapaDatos\CapaPresentacion\obj\Debug\CapaPresentacio
 C:\Users\Degol\source\repos\CapaDatos\CapaPresentacion\obj\Debug\CapaPresentacion.Login.resources
 C:\Users\Degol\source\repos\CapaDatos\CapaPresentacion\obj\Debug\CapaPresentacion.Forms.ControlAnimal.resources
 C:\Users\Degol\source\repos\CapaDatos\CapaPresentacion\obj\Debug\CapaPresentacion.Forms.IngresoAnimal.resources
+C:\Users\Degol\source\repos\CapaDatos\CapaPresentacion\obj\Debug\CapaPresentacion.Forms.EditarAnimal.resources

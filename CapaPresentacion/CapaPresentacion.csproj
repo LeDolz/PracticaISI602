@@ -52,6 +52,12 @@
     <Compile Include="Forms\ControlAnimal.Designer.cs">
       <DependentUpon>ControlAnimal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EditarAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditarAnimal.Designer.cs">
+      <DependentUpon>EditarAnimal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\IngresoAnimal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\ControlAnimal.resx">
       <DependentUpon>ControlAnimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditarAnimal.resx">
+      <DependentUpon>EditarAnimal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\IngresoAnimal.resx">
       <DependentUpon>IngresoAnimal.cs</DependentUpon>
