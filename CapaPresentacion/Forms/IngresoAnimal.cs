@@ -51,5 +51,10 @@ namespace CapaPresentacion.Forms
 
             popup.ShowDialog();
         }
+
+        private void buttonVolverIngreso_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

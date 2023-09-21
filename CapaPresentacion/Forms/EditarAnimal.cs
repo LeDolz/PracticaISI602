@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaNegocios;
 
 namespace CapaPresentacion.Forms
 {
@@ -41,6 +42,15 @@ namespace CapaPresentacion.Forms
         private void EditarAnimal_FormClosing(object sender, FormClosingEventArgs e)
         {
             ventanaAnterior.Visible = true;
+        }
+
+        private void buttonVolverEditar_Click(object sender, EventArgs e)
+        {
+
+
+            //TODO: Volver a la ventana anterior, ahora este boton tan solo prueba la conexion
+            Metodos metodo = new Metodos();
+            textBoxEditarCelda.Text = metodo.AlternarConexion(true);
         }
     }
 }

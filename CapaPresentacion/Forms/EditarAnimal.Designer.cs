@@ -34,15 +34,19 @@
             this.radioButtonNoVacunadoEditar = new System.Windows.Forms.RadioButton();
             this.radioButtonSiVacunadoEditar = new System.Windows.Forms.RadioButton();
             this.LabelEditarVacunacion = new System.Windows.Forms.Label();
-            this.labelEditarGeneroAnimal = new System.Windows.Forms.Label();
+            this.labelEditarGenero = new System.Windows.Forms.Label();
             this.dateTimePickerEditarVacunacion = new System.Windows.Forms.DateTimePicker();
             this.textBoxEditarEspecieAnimal = new System.Windows.Forms.TextBox();
-            this.labelEditarEspecieAnimal = new System.Windows.Forms.Label();
+            this.labelEditarEspecie = new System.Windows.Forms.Label();
             this.labelEditarFechaIngreso = new System.Windows.Forms.Label();
             this.groupBoxRadioButtonGenero = new System.Windows.Forms.GroupBox();
             this.radioButtonAnimalHembraEditar = new System.Windows.Forms.RadioButton();
             this.radioButtonAnimalMachoEditar = new System.Windows.Forms.RadioButton();
             this.labelInfoEditar = new System.Windows.Forms.Label();
+            this.labelEditarCelda = new System.Windows.Forms.Label();
+            this.textBoxEditarCelda = new System.Windows.Forms.TextBox();
+            this.buttonEditarAnimal = new System.Windows.Forms.Button();
+            this.buttonVolverEditar = new System.Windows.Forms.Button();
             this.tlpDatosUsuario.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBoxRadioButtonGenero.SuspendLayout();
@@ -66,21 +70,24 @@
             this.tlpDatosUsuario.ColumnCount = 2;
             this.tlpDatosUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.17323F));
             this.tlpDatosUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.82677F));
+            this.tlpDatosUsuario.Controls.Add(this.labelEditarCelda, 0, 4);
             this.tlpDatosUsuario.Controls.Add(this.groupBox1, 1, 3);
             this.tlpDatosUsuario.Controls.Add(this.LabelEditarVacunacion, 0, 3);
-            this.tlpDatosUsuario.Controls.Add(this.labelEditarGeneroAnimal, 0, 2);
+            this.tlpDatosUsuario.Controls.Add(this.labelEditarGenero, 0, 2);
             this.tlpDatosUsuario.Controls.Add(this.dateTimePickerEditarVacunacion, 1, 1);
             this.tlpDatosUsuario.Controls.Add(this.textBoxEditarEspecieAnimal, 1, 0);
-            this.tlpDatosUsuario.Controls.Add(this.labelEditarEspecieAnimal, 0, 0);
+            this.tlpDatosUsuario.Controls.Add(this.labelEditarEspecie, 0, 0);
             this.tlpDatosUsuario.Controls.Add(this.labelEditarFechaIngreso, 0, 1);
             this.tlpDatosUsuario.Controls.Add(this.groupBoxRadioButtonGenero, 1, 2);
+            this.tlpDatosUsuario.Controls.Add(this.textBoxEditarCelda, 1, 4);
             this.tlpDatosUsuario.Location = new System.Drawing.Point(37, 267);
             this.tlpDatosUsuario.Name = "tlpDatosUsuario";
-            this.tlpDatosUsuario.RowCount = 4;
-            this.tlpDatosUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpDatosUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpDatosUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpDatosUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpDatosUsuario.RowCount = 5;
+            this.tlpDatosUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpDatosUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpDatosUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpDatosUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpDatosUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tlpDatosUsuario.Size = new System.Drawing.Size(1510, 491);
             this.tlpDatosUsuario.TabIndex = 8;
             // 
@@ -89,9 +96,9 @@
             this.groupBox1.Controls.Add(this.radioButtonNoVacunadoEditar);
             this.groupBox1.Controls.Add(this.radioButtonSiVacunadoEditar);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Inch, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(473, 369);
+            this.groupBox1.Location = new System.Drawing.Point(473, 297);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1034, 116);
+            this.groupBox1.Size = new System.Drawing.Size(1034, 92);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
@@ -125,28 +132,28 @@
             this.LabelEditarVacunacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.LabelEditarVacunacion.AutoSize = true;
             this.LabelEditarVacunacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelEditarVacunacion.Location = new System.Drawing.Point(3, 391);
+            this.LabelEditarVacunacion.Location = new System.Drawing.Point(3, 306);
             this.LabelEditarVacunacion.Name = "LabelEditarVacunacion";
             this.LabelEditarVacunacion.Size = new System.Drawing.Size(464, 74);
             this.LabelEditarVacunacion.TabIndex = 10;
             this.LabelEditarVacunacion.Text = "Se encuentra vacunado el animal?";
             // 
-            // labelEditarGeneroAnimal
+            // labelEditarGenero
             // 
-            this.labelEditarGeneroAnimal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelEditarGeneroAnimal.AutoSize = true;
-            this.labelEditarGeneroAnimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEditarGeneroAnimal.Location = new System.Drawing.Point(3, 286);
-            this.labelEditarGeneroAnimal.Name = "labelEditarGeneroAnimal";
-            this.labelEditarGeneroAnimal.Size = new System.Drawing.Size(464, 37);
-            this.labelEditarGeneroAnimal.TabIndex = 8;
-            this.labelEditarGeneroAnimal.Text = "Nuevo género del animal:";
+            this.labelEditarGenero.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelEditarGenero.AutoSize = true;
+            this.labelEditarGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEditarGenero.Location = new System.Drawing.Point(3, 226);
+            this.labelEditarGenero.Name = "labelEditarGenero";
+            this.labelEditarGenero.Size = new System.Drawing.Size(464, 37);
+            this.labelEditarGenero.TabIndex = 8;
+            this.labelEditarGenero.Text = "Nuevo género del animal:";
             // 
             // dateTimePickerEditarVacunacion
             // 
             this.dateTimePickerEditarVacunacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePickerEditarVacunacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerEditarVacunacion.Location = new System.Drawing.Point(473, 161);
+            this.dateTimePickerEditarVacunacion.Location = new System.Drawing.Point(473, 125);
             this.dateTimePickerEditarVacunacion.Name = "dateTimePickerEditarVacunacion";
             this.dateTimePickerEditarVacunacion.Size = new System.Drawing.Size(1034, 44);
             this.dateTimePickerEditarVacunacion.TabIndex = 8;
@@ -155,29 +162,29 @@
             // 
             this.textBoxEditarEspecieAnimal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxEditarEspecieAnimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxEditarEspecieAnimal.Location = new System.Drawing.Point(470, 39);
+            this.textBoxEditarEspecieAnimal.Location = new System.Drawing.Point(470, 27);
             this.textBoxEditarEspecieAnimal.Margin = new System.Windows.Forms.Padding(0);
             this.textBoxEditarEspecieAnimal.Name = "textBoxEditarEspecieAnimal";
             this.textBoxEditarEspecieAnimal.Size = new System.Drawing.Size(1040, 44);
             this.textBoxEditarEspecieAnimal.TabIndex = 0;
             // 
-            // labelEditarEspecieAnimal
+            // labelEditarEspecie
             // 
-            this.labelEditarEspecieAnimal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelEditarEspecieAnimal.AutoSize = true;
-            this.labelEditarEspecieAnimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEditarEspecieAnimal.Location = new System.Drawing.Point(3, 42);
-            this.labelEditarEspecieAnimal.Name = "labelEditarEspecieAnimal";
-            this.labelEditarEspecieAnimal.Size = new System.Drawing.Size(464, 37);
-            this.labelEditarEspecieAnimal.TabIndex = 2;
-            this.labelEditarEspecieAnimal.Text = "Nueva especie del animal:";
+            this.labelEditarEspecie.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelEditarEspecie.AutoSize = true;
+            this.labelEditarEspecie.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEditarEspecie.Location = new System.Drawing.Point(3, 30);
+            this.labelEditarEspecie.Name = "labelEditarEspecie";
+            this.labelEditarEspecie.Size = new System.Drawing.Size(464, 37);
+            this.labelEditarEspecie.TabIndex = 2;
+            this.labelEditarEspecie.Text = "Nueva especie del animal:";
             // 
             // labelEditarFechaIngreso
             // 
             this.labelEditarFechaIngreso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.labelEditarFechaIngreso.AutoSize = true;
             this.labelEditarFechaIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEditarFechaIngreso.Location = new System.Drawing.Point(3, 146);
+            this.labelEditarFechaIngreso.Location = new System.Drawing.Point(3, 110);
             this.labelEditarFechaIngreso.Name = "labelEditarFechaIngreso";
             this.labelEditarFechaIngreso.Size = new System.Drawing.Size(464, 74);
             this.labelEditarFechaIngreso.TabIndex = 3;
@@ -188,9 +195,9 @@
             this.groupBoxRadioButtonGenero.Controls.Add(this.radioButtonAnimalHembraEditar);
             this.groupBoxRadioButtonGenero.Controls.Add(this.radioButtonAnimalMachoEditar);
             this.groupBoxRadioButtonGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Inch, ((byte)(0)));
-            this.groupBoxRadioButtonGenero.Location = new System.Drawing.Point(473, 247);
+            this.groupBoxRadioButtonGenero.Location = new System.Drawing.Point(473, 199);
             this.groupBoxRadioButtonGenero.Name = "groupBoxRadioButtonGenero";
-            this.groupBoxRadioButtonGenero.Size = new System.Drawing.Size(1034, 116);
+            this.groupBoxRadioButtonGenero.Size = new System.Drawing.Size(1034, 92);
             this.groupBoxRadioButtonGenero.TabIndex = 9;
             this.groupBoxRadioButtonGenero.TabStop = false;
             this.groupBoxRadioButtonGenero.Text = "groupBox1";
@@ -229,11 +236,56 @@
             this.labelInfoEditar.TabIndex = 9;
             this.labelInfoEditar.Text = "Deje el campo de texto en blanco para no realizar canbios en el";
             // 
+            // labelEditarCelda
+            // 
+            this.labelEditarCelda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelEditarCelda.AutoSize = true;
+            this.labelEditarCelda.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEditarCelda.Location = new System.Drawing.Point(3, 423);
+            this.labelEditarCelda.Name = "labelEditarCelda";
+            this.labelEditarCelda.Size = new System.Drawing.Size(464, 37);
+            this.labelEditarCelda.TabIndex = 11;
+            this.labelEditarCelda.Text = "Cambiar celda del animal:";
+            // 
+            // textBoxEditarCelda
+            // 
+            this.textBoxEditarCelda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxEditarCelda.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxEditarCelda.Location = new System.Drawing.Point(470, 419);
+            this.textBoxEditarCelda.Margin = new System.Windows.Forms.Padding(0);
+            this.textBoxEditarCelda.Name = "textBoxEditarCelda";
+            this.textBoxEditarCelda.Size = new System.Drawing.Size(1040, 44);
+            this.textBoxEditarCelda.TabIndex = 12;
+            // 
+            // buttonEditarAnimal
+            // 
+            this.buttonEditarAnimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEditarAnimal.Location = new System.Drawing.Point(450, 775);
+            this.buttonEditarAnimal.Name = "buttonEditarAnimal";
+            this.buttonEditarAnimal.Size = new System.Drawing.Size(700, 70);
+            this.buttonEditarAnimal.TabIndex = 10;
+            this.buttonEditarAnimal.Text = "Confirmar cambios";
+            this.buttonEditarAnimal.UseVisualStyleBackColor = true;
+            // 
+            // buttonVolverEditar
+            // 
+            this.buttonVolverEditar.AutoSize = true;
+            this.buttonVolverEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonVolverEditar.Location = new System.Drawing.Point(12, 813);
+            this.buttonVolverEditar.Name = "buttonVolverEditar";
+            this.buttonVolverEditar.Size = new System.Drawing.Size(84, 36);
+            this.buttonVolverEditar.TabIndex = 11;
+            this.buttonVolverEditar.Text = "Volver";
+            this.buttonVolverEditar.UseVisualStyleBackColor = true;
+            this.buttonVolverEditar.Click += new System.EventHandler(this.buttonVolverEditar_Click);
+            // 
             // EditarAnimal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1584, 861);
+            this.Controls.Add(this.buttonVolverEditar);
+            this.Controls.Add(this.buttonEditarAnimal);
             this.Controls.Add(this.labelInfoEditar);
             this.Controls.Add(this.tlpDatosUsuario);
             this.Controls.Add(this.labelTituloEditar);
@@ -259,14 +311,18 @@
         private System.Windows.Forms.RadioButton radioButtonNoVacunadoEditar;
         private System.Windows.Forms.RadioButton radioButtonSiVacunadoEditar;
         private System.Windows.Forms.Label LabelEditarVacunacion;
-        private System.Windows.Forms.Label labelEditarGeneroAnimal;
+        private System.Windows.Forms.Label labelEditarGenero;
         private System.Windows.Forms.DateTimePicker dateTimePickerEditarVacunacion;
         private System.Windows.Forms.TextBox textBoxEditarEspecieAnimal;
-        private System.Windows.Forms.Label labelEditarEspecieAnimal;
+        private System.Windows.Forms.Label labelEditarEspecie;
         private System.Windows.Forms.Label labelEditarFechaIngreso;
         private System.Windows.Forms.GroupBox groupBoxRadioButtonGenero;
         private System.Windows.Forms.RadioButton radioButtonAnimalHembraEditar;
         private System.Windows.Forms.RadioButton radioButtonAnimalMachoEditar;
         private System.Windows.Forms.Label labelInfoEditar;
+        private System.Windows.Forms.Label labelEditarCelda;
+        private System.Windows.Forms.TextBox textBoxEditarCelda;
+        private System.Windows.Forms.Button buttonEditarAnimal;
+        private System.Windows.Forms.Button buttonVolverEditar;
     }
 }

@@ -12,3 +12,8 @@ C:\Users\Degol\source\repos\CapaDatos\CapaPresentacion\obj\Debug\CapaPresentacio
 C:\Users\Degol\source\repos\CapaDatos\CapaPresentacion\obj\Debug\CapaPresentacion.Forms.ControlAnimal.resources
 C:\Users\Degol\source\repos\CapaDatos\CapaPresentacion\obj\Debug\CapaPresentacion.Forms.IngresoAnimal.resources
 C:\Users\Degol\source\repos\CapaDatos\CapaPresentacion\obj\Debug\CapaPresentacion.Forms.EditarAnimal.resources
+C:\Users\Degol\source\repos\CapaDatos\CapaPresentacion\bin\Debug\CapaNegocios.dll
+C:\Users\Degol\source\repos\CapaDatos\CapaPresentacion\bin\Debug\CapaDatos.dll
+C:\Users\Degol\source\repos\CapaDatos\CapaPresentacion\bin\Debug\CapaNegocios.pdb
+C:\Users\Degol\source\repos\CapaDatos\CapaPresentacion\bin\Debug\CapaDatos.pdb
+C:\Users\Degol\source\repos\CapaDatos\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete

@@ -31,22 +31,24 @@
             this.labelTituloIngreso = new System.Windows.Forms.Label();
             this.buttonVolverIngreso = new System.Windows.Forms.Button();
             this.tlpDatosUsuario = new System.Windows.Forms.TableLayoutPanel();
-            this.labelIngresoGeneroAnimal = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButtonNoVacunadoIngreso = new System.Windows.Forms.RadioButton();
+            this.radioButtonSiVacunadoIngreso = new System.Windows.Forms.RadioButton();
+            this.LabelIngresoVacunacion = new System.Windows.Forms.Label();
+            this.labelIngresoGenero = new System.Windows.Forms.Label();
             this.dateTimePickerIngresoVacunacion = new System.Windows.Forms.DateTimePicker();
             this.textBoxIngresoEspecieAnimal = new System.Windows.Forms.TextBox();
-            this.labelIngresoEspecieAnimal = new System.Windows.Forms.Label();
+            this.labelIngresoEspecie = new System.Windows.Forms.Label();
             this.labelIngresoFechaIngreso = new System.Windows.Forms.Label();
             this.groupBoxRadioButtonGenero = new System.Windows.Forms.GroupBox();
             this.radioButtonAnimalHembraIngreso = new System.Windows.Forms.RadioButton();
             this.radioButtonAnimalMachoIngreso = new System.Windows.Forms.RadioButton();
             this.buttonIngresarAnimal = new System.Windows.Forms.Button();
-            this.LabelIngresoVacunacion = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButtonNoVacunadoIngreso = new System.Windows.Forms.RadioButton();
-            this.radioButtonSiVacunadoIngreso = new System.Windows.Forms.RadioButton();
+            this.LabelIngresoCelda = new System.Windows.Forms.Label();
+            this.textBoxIngresoCelda = new System.Windows.Forms.TextBox();
             this.tlpDatosUsuario.SuspendLayout();
-            this.groupBoxRadioButtonGenero.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBoxRadioButtonGenero.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelTituloIngreso
@@ -69,6 +71,7 @@
             this.buttonVolverIngreso.TabIndex = 3;
             this.buttonVolverIngreso.Text = "Volver";
             this.buttonVolverIngreso.UseVisualStyleBackColor = true;
+            this.buttonVolverIngreso.Click += new System.EventHandler(this.buttonVolverIngreso_Click);
             // 
             // tlpDatosUsuario
             // 
@@ -78,40 +81,90 @@
             this.tlpDatosUsuario.ColumnCount = 2;
             this.tlpDatosUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.17323F));
             this.tlpDatosUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.82677F));
+            this.tlpDatosUsuario.Controls.Add(this.textBoxIngresoCelda, 1, 4);
+            this.tlpDatosUsuario.Controls.Add(this.LabelIngresoCelda, 0, 4);
             this.tlpDatosUsuario.Controls.Add(this.groupBox1, 1, 3);
             this.tlpDatosUsuario.Controls.Add(this.LabelIngresoVacunacion, 0, 3);
-            this.tlpDatosUsuario.Controls.Add(this.labelIngresoGeneroAnimal, 0, 2);
+            this.tlpDatosUsuario.Controls.Add(this.labelIngresoGenero, 0, 2);
             this.tlpDatosUsuario.Controls.Add(this.dateTimePickerIngresoVacunacion, 1, 1);
             this.tlpDatosUsuario.Controls.Add(this.textBoxIngresoEspecieAnimal, 1, 0);
-            this.tlpDatosUsuario.Controls.Add(this.labelIngresoEspecieAnimal, 0, 0);
+            this.tlpDatosUsuario.Controls.Add(this.labelIngresoEspecie, 0, 0);
             this.tlpDatosUsuario.Controls.Add(this.labelIngresoFechaIngreso, 0, 1);
             this.tlpDatosUsuario.Controls.Add(this.groupBoxRadioButtonGenero, 1, 2);
             this.tlpDatosUsuario.Location = new System.Drawing.Point(33, 182);
             this.tlpDatosUsuario.Name = "tlpDatosUsuario";
-            this.tlpDatosUsuario.RowCount = 4;
-            this.tlpDatosUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpDatosUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpDatosUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpDatosUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpDatosUsuario.RowCount = 5;
+            this.tlpDatosUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpDatosUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpDatosUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpDatosUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpDatosUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tlpDatosUsuario.Size = new System.Drawing.Size(1510, 491);
             this.tlpDatosUsuario.TabIndex = 7;
             // 
-            // labelIngresoGeneroAnimal
+            // groupBox1
             // 
-            this.labelIngresoGeneroAnimal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelIngresoGeneroAnimal.AutoSize = true;
-            this.labelIngresoGeneroAnimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIngresoGeneroAnimal.Location = new System.Drawing.Point(3, 286);
-            this.labelIngresoGeneroAnimal.Name = "labelIngresoGeneroAnimal";
-            this.labelIngresoGeneroAnimal.Size = new System.Drawing.Size(464, 37);
-            this.labelIngresoGeneroAnimal.TabIndex = 8;
-            this.labelIngresoGeneroAnimal.Text = "Ingrese el género del animal";
+            this.groupBox1.Controls.Add(this.radioButtonNoVacunadoIngreso);
+            this.groupBox1.Controls.Add(this.radioButtonSiVacunadoIngreso);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Inch, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(473, 297);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1034, 92);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // radioButtonNoVacunadoIngreso
+            // 
+            this.radioButtonNoVacunadoIngreso.AutoSize = true;
+            this.radioButtonNoVacunadoIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonNoVacunadoIngreso.Location = new System.Drawing.Point(354, 35);
+            this.radioButtonNoVacunadoIngreso.Name = "radioButtonNoVacunadoIngreso";
+            this.radioButtonNoVacunadoIngreso.Size = new System.Drawing.Size(77, 41);
+            this.radioButtonNoVacunadoIngreso.TabIndex = 1;
+            this.radioButtonNoVacunadoIngreso.TabStop = true;
+            this.radioButtonNoVacunadoIngreso.Text = "No";
+            this.radioButtonNoVacunadoIngreso.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonSiVacunadoIngreso
+            // 
+            this.radioButtonSiVacunadoIngreso.AutoSize = true;
+            this.radioButtonSiVacunadoIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonSiVacunadoIngreso.Location = new System.Drawing.Point(67, 37);
+            this.radioButtonSiVacunadoIngreso.Name = "radioButtonSiVacunadoIngreso";
+            this.radioButtonSiVacunadoIngreso.Size = new System.Drawing.Size(63, 41);
+            this.radioButtonSiVacunadoIngreso.TabIndex = 0;
+            this.radioButtonSiVacunadoIngreso.TabStop = true;
+            this.radioButtonSiVacunadoIngreso.Text = "Sí";
+            this.radioButtonSiVacunadoIngreso.UseVisualStyleBackColor = true;
+            // 
+            // LabelIngresoVacunacion
+            // 
+            this.LabelIngresoVacunacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.LabelIngresoVacunacion.AutoSize = true;
+            this.LabelIngresoVacunacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelIngresoVacunacion.Location = new System.Drawing.Point(3, 306);
+            this.LabelIngresoVacunacion.Name = "LabelIngresoVacunacion";
+            this.LabelIngresoVacunacion.Size = new System.Drawing.Size(464, 74);
+            this.LabelIngresoVacunacion.TabIndex = 10;
+            this.LabelIngresoVacunacion.Text = "Se encuentra vacunado el animal?";
+            // 
+            // labelIngresoGenero
+            // 
+            this.labelIngresoGenero.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelIngresoGenero.AutoSize = true;
+            this.labelIngresoGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIngresoGenero.Location = new System.Drawing.Point(3, 226);
+            this.labelIngresoGenero.Name = "labelIngresoGenero";
+            this.labelIngresoGenero.Size = new System.Drawing.Size(464, 37);
+            this.labelIngresoGenero.TabIndex = 8;
+            this.labelIngresoGenero.Text = "Ingrese el género del animal";
             // 
             // dateTimePickerIngresoVacunacion
             // 
             this.dateTimePickerIngresoVacunacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePickerIngresoVacunacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerIngresoVacunacion.Location = new System.Drawing.Point(473, 161);
+            this.dateTimePickerIngresoVacunacion.Location = new System.Drawing.Point(473, 125);
             this.dateTimePickerIngresoVacunacion.Name = "dateTimePickerIngresoVacunacion";
             this.dateTimePickerIngresoVacunacion.Size = new System.Drawing.Size(1034, 44);
             this.dateTimePickerIngresoVacunacion.TabIndex = 8;
@@ -120,29 +173,29 @@
             // 
             this.textBoxIngresoEspecieAnimal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxIngresoEspecieAnimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxIngresoEspecieAnimal.Location = new System.Drawing.Point(470, 39);
+            this.textBoxIngresoEspecieAnimal.Location = new System.Drawing.Point(470, 27);
             this.textBoxIngresoEspecieAnimal.Margin = new System.Windows.Forms.Padding(0);
             this.textBoxIngresoEspecieAnimal.Name = "textBoxIngresoEspecieAnimal";
             this.textBoxIngresoEspecieAnimal.Size = new System.Drawing.Size(1040, 44);
             this.textBoxIngresoEspecieAnimal.TabIndex = 0;
             // 
-            // labelIngresoEspecieAnimal
+            // labelIngresoEspecie
             // 
-            this.labelIngresoEspecieAnimal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelIngresoEspecieAnimal.AutoSize = true;
-            this.labelIngresoEspecieAnimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIngresoEspecieAnimal.Location = new System.Drawing.Point(3, 42);
-            this.labelIngresoEspecieAnimal.Name = "labelIngresoEspecieAnimal";
-            this.labelIngresoEspecieAnimal.Size = new System.Drawing.Size(464, 37);
-            this.labelIngresoEspecieAnimal.TabIndex = 2;
-            this.labelIngresoEspecieAnimal.Text = "Ingrese la especie del animal:";
+            this.labelIngresoEspecie.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelIngresoEspecie.AutoSize = true;
+            this.labelIngresoEspecie.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIngresoEspecie.Location = new System.Drawing.Point(3, 30);
+            this.labelIngresoEspecie.Name = "labelIngresoEspecie";
+            this.labelIngresoEspecie.Size = new System.Drawing.Size(464, 37);
+            this.labelIngresoEspecie.TabIndex = 2;
+            this.labelIngresoEspecie.Text = "Ingrese la especie del animal:";
             // 
             // labelIngresoFechaIngreso
             // 
             this.labelIngresoFechaIngreso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.labelIngresoFechaIngreso.AutoSize = true;
             this.labelIngresoFechaIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIngresoFechaIngreso.Location = new System.Drawing.Point(3, 146);
+            this.labelIngresoFechaIngreso.Location = new System.Drawing.Point(3, 110);
             this.labelIngresoFechaIngreso.Name = "labelIngresoFechaIngreso";
             this.labelIngresoFechaIngreso.Size = new System.Drawing.Size(464, 74);
             this.labelIngresoFechaIngreso.TabIndex = 3;
@@ -153,9 +206,9 @@
             this.groupBoxRadioButtonGenero.Controls.Add(this.radioButtonAnimalHembraIngreso);
             this.groupBoxRadioButtonGenero.Controls.Add(this.radioButtonAnimalMachoIngreso);
             this.groupBoxRadioButtonGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Inch, ((byte)(0)));
-            this.groupBoxRadioButtonGenero.Location = new System.Drawing.Point(473, 247);
+            this.groupBoxRadioButtonGenero.Location = new System.Drawing.Point(473, 199);
             this.groupBoxRadioButtonGenero.Name = "groupBoxRadioButtonGenero";
-            this.groupBoxRadioButtonGenero.Size = new System.Drawing.Size(1034, 116);
+            this.groupBoxRadioButtonGenero.Size = new System.Drawing.Size(1034, 92);
             this.groupBoxRadioButtonGenero.TabIndex = 9;
             this.groupBoxRadioButtonGenero.TabStop = false;
             this.groupBoxRadioButtonGenero.Text = "groupBox1";
@@ -187,60 +240,34 @@
             // buttonIngresarAnimal
             // 
             this.buttonIngresarAnimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonIngresarAnimal.Location = new System.Drawing.Point(444, 775);
+            this.buttonIngresarAnimal.Location = new System.Drawing.Point(450, 775);
             this.buttonIngresarAnimal.Name = "buttonIngresarAnimal";
-            this.buttonIngresarAnimal.Size = new System.Drawing.Size(686, 74);
+            this.buttonIngresarAnimal.Size = new System.Drawing.Size(700, 70);
             this.buttonIngresarAnimal.TabIndex = 8;
             this.buttonIngresarAnimal.Text = "Ingresar";
             this.buttonIngresarAnimal.UseVisualStyleBackColor = true;
             this.buttonIngresarAnimal.Click += new System.EventHandler(this.buttonIngresarAnimal_Click);
             // 
-            // LabelIngresoVacunacion
+            // LabelIngresoCelda
             // 
-            this.LabelIngresoVacunacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.LabelIngresoVacunacion.AutoSize = true;
-            this.LabelIngresoVacunacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelIngresoVacunacion.Location = new System.Drawing.Point(3, 391);
-            this.LabelIngresoVacunacion.Name = "LabelIngresoVacunacion";
-            this.LabelIngresoVacunacion.Size = new System.Drawing.Size(464, 74);
-            this.LabelIngresoVacunacion.TabIndex = 10;
-            this.LabelIngresoVacunacion.Text = "Se encuentra vacunado el animal?";
+            this.LabelIngresoCelda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.LabelIngresoCelda.AutoSize = true;
+            this.LabelIngresoCelda.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelIngresoCelda.Location = new System.Drawing.Point(3, 404);
+            this.LabelIngresoCelda.Name = "LabelIngresoCelda";
+            this.LabelIngresoCelda.Size = new System.Drawing.Size(464, 74);
+            this.LabelIngresoCelda.TabIndex = 11;
+            this.LabelIngresoCelda.Text = "Ingrese la celda en la cual se dejará al animal:";
             // 
-            // groupBox1
+            // textBoxIngresoCelda
             // 
-            this.groupBox1.Controls.Add(this.radioButtonNoVacunadoIngreso);
-            this.groupBox1.Controls.Add(this.radioButtonSiVacunadoIngreso);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Inch, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(473, 369);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1034, 116);
-            this.groupBox1.TabIndex = 10;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
-            // 
-            // radioButtonNoVacunadoIngreso
-            // 
-            this.radioButtonNoVacunadoIngreso.AutoSize = true;
-            this.radioButtonNoVacunadoIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonNoVacunadoIngreso.Location = new System.Drawing.Point(354, 35);
-            this.radioButtonNoVacunadoIngreso.Name = "radioButtonNoVacunadoIngreso";
-            this.radioButtonNoVacunadoIngreso.Size = new System.Drawing.Size(77, 41);
-            this.radioButtonNoVacunadoIngreso.TabIndex = 1;
-            this.radioButtonNoVacunadoIngreso.TabStop = true;
-            this.radioButtonNoVacunadoIngreso.Text = "No";
-            this.radioButtonNoVacunadoIngreso.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonSiVacunadoIngreso
-            // 
-            this.radioButtonSiVacunadoIngreso.AutoSize = true;
-            this.radioButtonSiVacunadoIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonSiVacunadoIngreso.Location = new System.Drawing.Point(67, 37);
-            this.radioButtonSiVacunadoIngreso.Name = "radioButtonSiVacunadoIngreso";
-            this.radioButtonSiVacunadoIngreso.Size = new System.Drawing.Size(63, 41);
-            this.radioButtonSiVacunadoIngreso.TabIndex = 0;
-            this.radioButtonSiVacunadoIngreso.TabStop = true;
-            this.radioButtonSiVacunadoIngreso.Text = "Sí";
-            this.radioButtonSiVacunadoIngreso.UseVisualStyleBackColor = true;
+            this.textBoxIngresoCelda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxIngresoCelda.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxIngresoCelda.Location = new System.Drawing.Point(470, 419);
+            this.textBoxIngresoCelda.Margin = new System.Windows.Forms.Padding(0);
+            this.textBoxIngresoCelda.Name = "textBoxIngresoCelda";
+            this.textBoxIngresoCelda.Size = new System.Drawing.Size(1040, 44);
+            this.textBoxIngresoCelda.TabIndex = 12;
             // 
             // IngresoAnimal
             // 
@@ -257,10 +284,10 @@
             this.Load += new System.EventHandler(this.IngresoAnimal_Load);
             this.tlpDatosUsuario.ResumeLayout(false);
             this.tlpDatosUsuario.PerformLayout();
-            this.groupBoxRadioButtonGenero.ResumeLayout(false);
-            this.groupBoxRadioButtonGenero.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBoxRadioButtonGenero.ResumeLayout(false);
+            this.groupBoxRadioButtonGenero.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,10 +299,10 @@
         private System.Windows.Forms.Button buttonVolverIngreso;
         private System.Windows.Forms.TableLayoutPanel tlpDatosUsuario;
         private System.Windows.Forms.TextBox textBoxIngresoEspecieAnimal;
-        private System.Windows.Forms.Label labelIngresoEspecieAnimal;
+        private System.Windows.Forms.Label labelIngresoEspecie;
         private System.Windows.Forms.Label labelIngresoFechaIngreso;
         private System.Windows.Forms.DateTimePicker dateTimePickerIngresoVacunacion;
-        private System.Windows.Forms.Label labelIngresoGeneroAnimal;
+        private System.Windows.Forms.Label labelIngresoGenero;
         private System.Windows.Forms.GroupBox groupBoxRadioButtonGenero;
         private System.Windows.Forms.RadioButton radioButtonAnimalMachoIngreso;
         private System.Windows.Forms.RadioButton radioButtonAnimalHembraIngreso;
@@ -284,5 +311,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButtonNoVacunadoIngreso;
         private System.Windows.Forms.RadioButton radioButtonSiVacunadoIngreso;
+        private System.Windows.Forms.TextBox textBoxIngresoCelda;
+        private System.Windows.Forms.Label LabelIngresoCelda;
     }
 }

@@ -105,14 +105,12 @@
             // 
             // buttonBuscarMascota
             // 
-            this.buttonBuscarMascota.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonBuscarMascota.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonBuscarMascota.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuscarMascota.Location = new System.Drawing.Point(1241, 3);
+            this.buttonBuscarMascota.Location = new System.Drawing.Point(1241, 28);
             this.buttonBuscarMascota.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.buttonBuscarMascota.Name = "buttonBuscarMascota";
-            this.buttonBuscarMascota.Size = new System.Drawing.Size(258, 94);
+            this.buttonBuscarMascota.Size = new System.Drawing.Size(258, 44);
             this.buttonBuscarMascota.TabIndex = 2;
             this.buttonBuscarMascota.Text = "Buscar";
             this.buttonBuscarMascota.UseVisualStyleBackColor = true;

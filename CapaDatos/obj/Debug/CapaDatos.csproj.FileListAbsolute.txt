@@ -1,0 +1,9 @@
+C:\Users\Degol\source\repos\CapaDatos\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\Degol\source\repos\CapaDatos\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\Degol\source\repos\CapaDatos\CapaDatos\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Degol\source\repos\CapaDatos\CapaDatos\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Degol\source\repos\CapaDatos\CapaDatos\obj\Debug\CapaDatos.csproj.AssemblyReference.cache
+C:\Users\Degol\source\repos\CapaDatos\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Users\Degol\source\repos\CapaDatos\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
+C:\Users\Degol\source\repos\CapaDatos\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\Degol\source\repos\CapaDatos\CapaDatos\obj\Debug\CapaDatos.pdb
