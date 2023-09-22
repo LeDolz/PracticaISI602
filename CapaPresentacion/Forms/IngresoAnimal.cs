@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaNegocios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace CapaPresentacion.Forms
     public partial class IngresoAnimal : Form
     {
         Form ventanaAnterior = null;
+        Metodos capaDatos = new Metodos();
         public IngresoAnimal(Form ventanaAnterior)
         {
             InitializeComponent();
@@ -34,27 +36,34 @@ namespace CapaPresentacion.Forms
         private void buttonIngresarAnimal_Click(object sender, EventArgs e)
         {
 
-            //verificar el radiobutton
+            //test ingreso
 
-            IngresoAnimal popup = new IngresoAnimal(this);
 
-            if (radioButtonAnimalHembraIngreso.Checked)
-            {
-                popup.labelTituloIngreso.Text = "Hembra";
-            }
-            else if(radioButtonAnimalMachoIngreso.Checked)
-            {
-                popup.labelTituloIngreso.Text = "macho";
-            }
+            string genero = (radioButtonAnimalMachoIngreso.Checked) ? "M" : "F";
+
+
+            Metodos metodos = new Metodos();
+            string resultado = metodos.VerificarIngresoAnimal(
+                    this.textBoxIngresoEspecieAnimal.Text,
+                    genero,
+                    this.textBoxIngresoCelda.Text,
+                    this.dateTimePickerIngresoVacunacion.Value,
+                    this.radioButtonSiVacunadoIngreso.Checked
+                );
+
+
+
+            Login.MostrarError(resultado);
             
-
-
-            popup.ShowDialog();
         }
 
         private void buttonVolverIngreso_Click(object sender, EventArgs e)
         {
+            capaDatos.VolverFormAnterior(ventanaAnterior, this);
 
         }
+
+
+
     }
 }

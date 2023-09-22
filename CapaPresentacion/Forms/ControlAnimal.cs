@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaNegocios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace CapaPresentacion.Forms
     public partial class ControlAnimal : Form
     {
         Form ventanaAnterior = null;
+        Metodos capaDatos = new Metodos();
         public ControlAnimal(Form ventanaAnterior)
         {
             InitializeComponent();
@@ -22,8 +24,7 @@ namespace CapaPresentacion.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ventanaAnterior.Visible = true;
-            this.Close();
+            capaDatos.VolverFormAnterior(ventanaAnterior, this);
         }
 
 

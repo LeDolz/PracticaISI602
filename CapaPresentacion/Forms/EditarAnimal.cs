@@ -14,6 +14,8 @@ namespace CapaPresentacion.Forms
     public partial class EditarAnimal : Form
     {
         Form ventanaAnterior = null;
+        Metodos capaDatos = new Metodos();
+
         public EditarAnimal(Form ventanaAnterior, String especieAnimal, DateTime fechaIngreso, String generoAnimal, bool vacunacionAnimal)
         {
             InitializeComponent();
@@ -47,10 +49,9 @@ namespace CapaPresentacion.Forms
         private void buttonVolverEditar_Click(object sender, EventArgs e)
         {
 
+            capaDatos.VolverFormAnterior(ventanaAnterior, this);
+            //TODO: Volver a la ventana anterior
 
-            //TODO: Volver a la ventana anterior, ahora este boton tan solo prueba la conexion
-            Metodos metodo = new Metodos();
-            textBoxEditarCelda.Text = metodo.AlternarConexion(true);
         }
     }
 }

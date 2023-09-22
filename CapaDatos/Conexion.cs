@@ -12,6 +12,7 @@ namespace CapaDatos
 
         private string cadenaConexion = "Server=DOLZONARO\\SQLEXPRESS;Database=RefugioMascotas;Integrated Security=True;";
         private SqlConnection conexionSql = new SqlConnection();
+        private string mensajeError = "Error";
 
         public string AbrirConexion()
         {
@@ -38,7 +39,52 @@ namespace CapaDatos
             catch (Exception ex) { Console.WriteLine(ex.Message); }
         }
 
+        public string InsertarAnimal(string especie, string genero, string celda, DateTime date, bool vacunado)
+        {
+            String sqlInsert = "INSERT INTO MASCOTAS " +
+                "(especie, fechaIngreso, genero, vacunado, celda) " +
+                "VALUES " +
+                "(@especie, @fechaIngreso, @genero, @vacunado, @celda)";
 
+            if (especie == string.Empty || genero == string.Empty || celda == string.Empty)
+            {
+                if (date > DateTime.Now)
+                {
+                    return "La fecha no es valida";
+                }
+
+                return "Alguno de los campos se encuentra incompleto";
+            }
+
+            using (SqlCommand comandoInsert = new SqlCommand(sqlInsert, conexionSql))
+            {
+
+                try
+                {
+                    comandoInsert.Parameters.AddWithValue("@especie", especie);
+                    comandoInsert.Parameters.AddWithValue("@fechaIngreso", date);
+                    comandoInsert.Parameters.AddWithValue("@genero", genero);
+                    comandoInsert.Parameters.AddWithValue("@vacunado", vacunado);
+                    comandoInsert.Parameters.AddWithValue("@celda", celda);
+
+                    int filasAfectadas = comandoInsert.ExecuteNonQuery();
+                    if (filasAfectadas > 0)
+                    {
+                        return "Animal registrado con exito";
+                    }
+                    else
+                    {
+                        return "No se ha podido ingresar al animal";
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    return ex.Message;
+                }
+            }
+
+        }
 
 
         public String GetCadenaConexion()
