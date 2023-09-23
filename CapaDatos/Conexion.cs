@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -10,15 +11,14 @@ namespace CapaDatos
     public class Conexion
     {
 
-        private string cadenaConexion = "Server=DOLZONARO\\SQLEXPRESS;Database=RefugioMascotas;Integrated Security=True;";
-        private SqlConnection conexionSql = new SqlConnection();
+        //private string cadenaConexion = "Server=DOLZONARO\\SQLEXPRESS;Database=RefugioMascotas;Integrated Security=True;";
+        private SqlConnection conexionSql = new SqlConnection("Server=DOLZONARO\\SQLEXPRESS;Database=RefugioMascotas;Integrated Security=True;");
         private string mensajeError = "Error";
 
         public string AbrirConexion()
         {
             try
             {
-                conexionSql.ConnectionString = cadenaConexion;
                 conexionSql.Open();
                 return "Exito abrir";
             }
@@ -37,6 +37,18 @@ namespace CapaDatos
                 conexionSql.Close();
             }
             catch (Exception ex) { Console.WriteLine(ex.Message); }
+        }
+
+        public DataSet getDataAnimales()
+        {
+            string sqlSelect = "SELECT * FROM MASCOTAS";
+
+            SqlDataAdapter adaptador = new SqlDataAdapter(sqlSelect, conexionSql);
+            DataSet datos = new DataSet();
+
+            adaptador.Fill(datos, "Animales");
+            return datos;
+
         }
 
         public string InsertarAnimal(string especie, string genero, string celda, DateTime date, bool vacunado)
@@ -86,10 +98,27 @@ namespace CapaDatos
 
         }
 
-
-        public String GetCadenaConexion()
+        public string EliminarAnimal(string id)
         {
-            return cadenaConexion;
+
+            string sqlDelete = "DELETE FROM MASCOTAS WHERE id = @id";
+
+            using (SqlCommand comandoDelete = new SqlCommand(sqlDelete, conexionSql))
+            {
+                conexionSql.Open();
+                comandoDelete.Parameters.AddWithValue("@id", id);
+                int filasAfectadas = comandoDelete.ExecuteNonQuery();
+                conexionSql.Close();
+                if (filasAfectadas>0)
+                {
+                    return $"Registro con ID = {id} ha sido eliminado";
+                }
+                else
+                {
+                    return $"No existe registro con ID = {id}";
+                }
+
+            }
         }
 
 

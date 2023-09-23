@@ -34,13 +34,13 @@
             this.labelIngresarIdMascota = new System.Windows.Forms.Label();
             this.textBoxIngresarIdMascota = new System.Windows.Forms.TextBox();
             this.buttonBuscarMascota = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvAnimales = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonIngresar = new System.Windows.Forms.Button();
             this.buttonEditar = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAnimales)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -115,13 +115,14 @@
             this.buttonBuscarMascota.Text = "Buscar";
             this.buttonBuscarMascota.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvAnimales
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(43, 321);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1489, 287);
-            this.dataGridView1.TabIndex = 3;
+            this.dgvAnimales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAnimales.Location = new System.Drawing.Point(43, 321);
+            this.dgvAnimales.Name = "dgvAnimales";
+            this.dgvAnimales.ReadOnly = true;
+            this.dgvAnimales.Size = new System.Drawing.Size(1489, 287);
+            this.dgvAnimales.TabIndex = 3;
             // 
             // tableLayoutPanel2
             // 
@@ -177,6 +178,7 @@
             this.buttonEliminar.TabIndex = 3;
             this.buttonEliminar.Text = "Eliminar";
             this.buttonEliminar.UseVisualStyleBackColor = true;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
             // ControlAnimal
             // 
@@ -184,16 +186,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1584, 861);
             this.Controls.Add(this.tableLayoutPanel2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvAnimales);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.labelTituloControl);
             this.Controls.Add(this.buttonVolverControl);
             this.Name = "ControlAnimal";
             this.Text = "ControlMascotas";
+            this.Activated += new System.EventHandler(this.ControlAnimal_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ControlMascotas_FormClosing);
+            this.Load += new System.EventHandler(this.ControlAnimal_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAnimales)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
@@ -209,7 +213,7 @@
         private System.Windows.Forms.Label labelIngresarIdMascota;
         private System.Windows.Forms.TextBox textBoxIngresarIdMascota;
         private System.Windows.Forms.Button buttonBuscarMascota;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvAnimales;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button buttonIngresar;
         private System.Windows.Forms.Button buttonEditar;

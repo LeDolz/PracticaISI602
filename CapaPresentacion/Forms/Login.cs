@@ -14,7 +14,7 @@ namespace CapaPresentacion
 {
     public partial class Login : Form
     {
-        Metodos metodo = new Metodos();
+        Metodos capaNegocios = new Metodos();
         public Login()
         {
             InitializeComponent();
@@ -48,42 +48,10 @@ namespace CapaPresentacion
 
         }
 
-
-        public static void MostrarError(string mensaje)
+        private void Login_Load(object sender, EventArgs e)
         {
-            // Crea un nuevo formulario para mostrar el mensaje de error
-            Form formularioError = new Form();
-            formularioError.Text = "Error";
-            formularioError.Size = new System.Drawing.Size(300, 150);
-            formularioError.FormBorderStyle = FormBorderStyle.FixedDialog;
-            formularioError.StartPosition = FormStartPosition.CenterParent;
-
-            // Crea un label para mostrar el mensaje de error
-            Label labelMensaje = new Label();
-            labelMensaje.Text = mensaje;
-            labelMensaje.Dock = DockStyle.Fill;
-            labelMensaje.TextAlign = ContentAlignment.MiddleCenter;
-
-            // crear boton para salir
-            Button botonSalir = new Button();
-            botonSalir.Text = "Aceptar";
-            botonSalir.Dock = DockStyle.Bottom;
-
-            botonSalir.Click += (sender, e) =>
-            {
-                formularioError.Close();
-            };
-
-            // Agrega el label al formulario de error
-            formularioError.Controls.Add(labelMensaje);
-            formularioError.Controls.Add(botonSalir);
-
-            // Muestra el formulario de error de manera modal (bloqueando la interacción con otros formularios)
-            formularioError.ShowDialog();
+            capaNegocios.AlternarConexion(true);
         }
-
-
-
     }
 
 }

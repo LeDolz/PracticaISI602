@@ -53,7 +53,7 @@ namespace CapaPresentacion.Forms
 
 
 
-            Login.MostrarError(resultado);
+            Metodos.MostrarError(resultado);
             
         }
 

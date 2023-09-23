@@ -14,7 +14,7 @@ namespace CapaPresentacion.Forms
     public partial class ControlAnimal : Form
     {
         Form ventanaAnterior = null;
-        Metodos capaDatos = new Metodos();
+        Metodos capaNegocios = new Metodos();
         public ControlAnimal(Form ventanaAnterior)
         {
             InitializeComponent();
@@ -24,7 +24,7 @@ namespace CapaPresentacion.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            capaDatos.VolverFormAnterior(ventanaAnterior, this);
+            capaNegocios.VolverFormAnterior(ventanaAnterior, this);
         }
 
 
@@ -55,5 +55,20 @@ namespace CapaPresentacion.Forms
             catch { }
 
         }
+
+        private void ControlAnimal_Load(object sender, EventArgs e)
+        {
+            capaNegocios.AplicarDatosDGV(dgvAnimales);
+        }
+        private void ControlAnimal_Activated(object sender, EventArgs e)
+        {
+            capaNegocios.AplicarDatosDGV(dgvAnimales);
+        }
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            capaNegocios.EliminarAnimalDeCelda(dgvAnimales);
+        }
+
+
     }
 }
