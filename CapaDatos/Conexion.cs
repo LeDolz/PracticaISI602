@@ -13,7 +13,7 @@ namespace CapaDatos
 
         //private string cadenaConexion = "Server=DOLZONARO\\SQLEXPRESS;Database=RefugioMascotas;Integrated Security=True;";
         private SqlConnection conexionSql = new SqlConnection("Server=DOLZONARO\\SQLEXPRESS;Database=RefugioMascotas;Integrated Security=True;");
-        private string mensajeError = "Error";
+        //private string mensajeError = "Error";
 
         public string AbrirConexion()
         {
@@ -39,17 +39,45 @@ namespace CapaDatos
             catch (Exception ex) { Console.WriteLine(ex.Message); }
         }
 
-        public DataSet getDataAnimales()
+        public DataTable getDataAnimales()
         {
             string sqlSelect = "SELECT * FROM MASCOTAS";
 
             SqlDataAdapter adaptador = new SqlDataAdapter(sqlSelect, conexionSql);
-            DataSet datos = new DataSet();
-
-            adaptador.Fill(datos, "Animales");
+            DataTable datos = new DataTable();
+            adaptador.Fill(datos);
             return datos;
+            
 
         }
+        public DataTable BuscarAnimal(string id)
+        {
+            string sqlSelect = "SELECT * FROM MASCOTAS WHERE id LIKE @id";
+
+            using (SqlCommand cmd = new SqlCommand(sqlSelect, conexionSql))
+            {
+                cmd.Parameters.AddWithValue("@id", id);
+
+                SqlDataAdapter adaptador = new SqlDataAdapter(cmd);
+                DataTable tabla = new DataTable();
+                adaptador.Fill(tabla);
+
+                return tabla;
+
+
+            }
+
+            /*
+            SqlCommand cmd = new SqlCommand(sqlSelect, conexionSql);
+            cmd.Parameters.AddWithValue("@id", id);
+
+            SqlDataAdapter adaptador = new SqlDataAdapter(cmd);
+            DataSet datos = new DataSet();
+            adaptador.Fill(datos);
+            return datos;
+            */
+        }
+
 
         public string InsertarAnimal(string especie, string genero, string celda, DateTime date, bool vacunado)
         {

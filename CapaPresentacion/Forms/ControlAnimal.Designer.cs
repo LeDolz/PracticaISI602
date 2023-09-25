@@ -114,6 +114,7 @@
             this.buttonBuscarMascota.TabIndex = 2;
             this.buttonBuscarMascota.Text = "Buscar";
             this.buttonBuscarMascota.UseVisualStyleBackColor = true;
+            this.buttonBuscarMascota.Click += new System.EventHandler(this.buttonBuscarMascota_Click);
             // 
             // dgvAnimales
             // 

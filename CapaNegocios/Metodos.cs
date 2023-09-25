@@ -7,7 +7,7 @@ using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 using System.Drawing;
 using CapaDatos;
-
+using System.Data;
 
 namespace CapaNegocios
 {
@@ -58,11 +58,31 @@ namespace CapaNegocios
             this.AplicarDatosDGV(dgv);
         }
 
+        public void BuscarAnimal(TextBox cuadroBusqueda, DataGridView dgv)
+        {
+            DataTable tablaDatos = capadatos.BuscarAnimal(cuadroBusqueda.Text);
+
+
+
+            if (cuadroBusqueda.Text == string.Empty)
+            {
+                MostrarError("Ingrese una id en el cuadro de búsqueda");
+            }
+            else if (tablaDatos.Rows.Count == 0)
+            {
+                MostrarError($"No hay animales con el ID {cuadroBusqueda.Text}");
+            }
+            else
+            {
+                dgv.DataSource = capadatos.BuscarAnimal(cuadroBusqueda.Text);
+            }
+
+        }
 
         public void AplicarDatosDGV(DataGridView dgv)
         {
 
-            dgv.DataSource = capadatos.getDataAnimales().Tables["Animales"];
+            dgv.DataSource = capadatos.getDataAnimales();
 
         }
 

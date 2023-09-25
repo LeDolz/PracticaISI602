@@ -69,6 +69,9 @@ namespace CapaPresentacion.Forms
             capaNegocios.EliminarAnimalDeCelda(dgvAnimales);
         }
 
-
+        private void buttonBuscarMascota_Click(object sender, EventArgs e)
+        {
+            capaNegocios.BuscarAnimal(textBoxIngresarIdMascota, dgvAnimales);
+        }
     }
 }
