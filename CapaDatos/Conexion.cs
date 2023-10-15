@@ -150,5 +150,36 @@ namespace CapaDatos
         }
 
 
+        public bool BuscarUsuario(string nombreUsuario, string clave)
+        {
+
+            string sqlBuscaUsuario = "SELECT * FROM Empleados WHERE nombreUsuario = @nombreUsuario AND clave = @clave";
+
+            
+            using (SqlCommand comandoBuscarUser = new SqlCommand(sqlBuscaUsuario, conexionSql))
+            {
+                comandoBuscarUser.Parameters.AddWithValue("@nombreUsuario", nombreUsuario);
+                comandoBuscarUser.Parameters.AddWithValue("@clave", clave);
+
+
+                using (SqlDataReader reader = comandoBuscarUser.ExecuteReader())
+                {
+
+                    if (reader.Read())
+                    {
+                        return true;
+                    }else { return false; }
+
+                }
+
+
+
+            }
+            
+
+
+        }
+
+
     }
 }

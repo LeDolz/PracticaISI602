@@ -20,6 +20,8 @@ namespace CapaPresentacion
             InitializeComponent();
             CentrarTitulo(labelBienvenido, this);
             buttonIngresar.Left = (ClientSize.Width - buttonIngresar.Width) / 2;
+            textBoxContrasenia.UseSystemPasswordChar = true;
+            textBoxContrasenia.PasswordChar = '*';
 
 
             //verificar conexion
@@ -28,10 +30,21 @@ namespace CapaPresentacion
 
         private void buttonIngresar_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
+
+
+
+            if (capaNegocios.VerificarUsuario(textBoxUsuario, textBoxContrasenia))
+            {
+                this.Visible = false;
+                ControlAnimal nuevaVentana = new ControlAnimal(this);
+                nuevaVentana.Visible = true;
+            }
+            else
+            {
+                Metodos.MostrarError("Usuario o clave incorrecta");
+            }
+
             LimpiarTextBoxes();
-            ControlAnimal nuevaVentana = new ControlAnimal(this);
-            nuevaVentana.Visible = true;
         }
 
         public static void CentrarTitulo(Label label, Form form)

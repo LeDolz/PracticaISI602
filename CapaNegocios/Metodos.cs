@@ -79,6 +79,20 @@ namespace CapaNegocios
 
         }
 
+        public bool VerificarUsuario(TextBox txtboxUsuario, TextBox txtClave)
+        {
+
+            if (capadatos.BuscarUsuario(txtboxUsuario.Text, txtClave.Text))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
         public void AplicarDatosDGV(DataGridView dgv)
         {
 
