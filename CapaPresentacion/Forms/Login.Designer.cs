@@ -130,7 +130,7 @@
             this.Controls.Add(this.buttonIngresar);
             this.Controls.Add(this.labelBienvenido);
             this.Name = "Login";
-            this.Text = "Form1";
+            this.Text = "Iniciar sesión";
             this.Load += new System.EventHandler(this.Login_Load);
             this.tlpDatosUsuario.ResumeLayout(false);
             this.tlpDatosUsuario.PerformLayout();

@@ -31,6 +31,8 @@
             this.labelTituloIngreso = new System.Windows.Forms.Label();
             this.buttonVolverIngreso = new System.Windows.Forms.Button();
             this.tlpDatosUsuario = new System.Windows.Forms.TableLayoutPanel();
+            this.textBoxIngresoCelda = new System.Windows.Forms.TextBox();
+            this.LabelIngresoCelda = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButtonNoVacunadoIngreso = new System.Windows.Forms.RadioButton();
             this.radioButtonSiVacunadoIngreso = new System.Windows.Forms.RadioButton();
@@ -44,10 +46,7 @@
             this.radioButtonAnimalHembraIngreso = new System.Windows.Forms.RadioButton();
             this.radioButtonAnimalMachoIngreso = new System.Windows.Forms.RadioButton();
             this.buttonIngresarAnimal = new System.Windows.Forms.Button();
-            this.LabelIngresoCelda = new System.Windows.Forms.Label();
-            this.textBoxIngresoCelda = new System.Windows.Forms.TextBox();
             this.tlpDatosUsuario.SuspendLayout();
-            this.groupBoxRadioButtonGenero.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBoxRadioButtonGenero.SuspendLayout();
             this.SuspendLayout();
@@ -102,6 +101,27 @@
             this.tlpDatosUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tlpDatosUsuario.Size = new System.Drawing.Size(1510, 491);
             this.tlpDatosUsuario.TabIndex = 7;
+            // 
+            // textBoxIngresoCelda
+            // 
+            this.textBoxIngresoCelda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxIngresoCelda.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxIngresoCelda.Location = new System.Drawing.Point(470, 419);
+            this.textBoxIngresoCelda.Margin = new System.Windows.Forms.Padding(0);
+            this.textBoxIngresoCelda.Name = "textBoxIngresoCelda";
+            this.textBoxIngresoCelda.Size = new System.Drawing.Size(1040, 44);
+            this.textBoxIngresoCelda.TabIndex = 12;
+            // 
+            // LabelIngresoCelda
+            // 
+            this.LabelIngresoCelda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.LabelIngresoCelda.AutoSize = true;
+            this.LabelIngresoCelda.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelIngresoCelda.Location = new System.Drawing.Point(3, 404);
+            this.LabelIngresoCelda.Name = "LabelIngresoCelda";
+            this.LabelIngresoCelda.Size = new System.Drawing.Size(464, 74);
+            this.LabelIngresoCelda.TabIndex = 11;
+            this.LabelIngresoCelda.Text = "Ingrese la celda en la cual se dejará al animal:";
             // 
             // groupBox1
             // 
@@ -161,7 +181,7 @@
             this.labelIngresoGenero.TabIndex = 8;
             this.labelIngresoGenero.Text = "Ingrese el género del animal";
             // 
-            // groupBoxRadioButtonGenero
+            // dateTimePickerIngresoVacunacion
             // 
             this.dateTimePickerIngresoVacunacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePickerIngresoVacunacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -249,27 +269,6 @@
             this.buttonIngresarAnimal.UseVisualStyleBackColor = true;
             this.buttonIngresarAnimal.Click += new System.EventHandler(this.buttonIngresarAnimal_Click);
             // 
-            // LabelIngresoCelda
-            // 
-            this.LabelIngresoCelda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.LabelIngresoCelda.AutoSize = true;
-            this.LabelIngresoCelda.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelIngresoCelda.Location = new System.Drawing.Point(3, 404);
-            this.LabelIngresoCelda.Name = "LabelIngresoCelda";
-            this.LabelIngresoCelda.Size = new System.Drawing.Size(464, 74);
-            this.LabelIngresoCelda.TabIndex = 11;
-            this.LabelIngresoCelda.Text = "Ingrese la celda en la cual se dejará al animal:";
-            // 
-            // textBoxIngresoCelda
-            // 
-            this.textBoxIngresoCelda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxIngresoCelda.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxIngresoCelda.Location = new System.Drawing.Point(470, 419);
-            this.textBoxIngresoCelda.Margin = new System.Windows.Forms.Padding(0);
-            this.textBoxIngresoCelda.Name = "textBoxIngresoCelda";
-            this.textBoxIngresoCelda.Size = new System.Drawing.Size(1040, 44);
-            this.textBoxIngresoCelda.TabIndex = 12;
-            // 
             // IngresoAnimal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -280,13 +279,11 @@
             this.Controls.Add(this.buttonVolverIngreso);
             this.Controls.Add(this.labelTituloIngreso);
             this.Name = "IngresoAnimal";
-            this.Text = "IngresoAnimal";
+            this.Text = "Ingresar animales";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.IngresoAnimal_FormClosing);
             this.Load += new System.EventHandler(this.IngresoAnimal_Load);
             this.tlpDatosUsuario.ResumeLayout(false);
             this.tlpDatosUsuario.PerformLayout();
-            this.groupBoxRadioButtonGenero.ResumeLayout(false);
-            this.groupBoxRadioButtonGenero.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBoxRadioButtonGenero.ResumeLayout(false);

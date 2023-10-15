@@ -150,7 +150,7 @@ namespace CapaDatos
         }
 
 
-        public bool BuscarUsuario(string nombreUsuario, string clave)
+        public string[] BuscarUsuario(string nombreUsuario, string clave)
         {
 
             string sqlBuscaUsuario = "SELECT * FROM Empleados WHERE nombreUsuario = @nombreUsuario AND clave = @clave";
@@ -167,8 +167,15 @@ namespace CapaDatos
 
                     if (reader.Read())
                     {
-                        return true;
-                    }else { return false; }
+                        string[] datos = new string[2];
+                        datos[0] = reader["nombreUsuario"].ToString();
+                        datos[1] = reader["clave"].ToString();
+
+                        return datos;
+                    }else {
+                        string[] datosVacios = new string[2];
+                        return datosVacios; 
+                    }
 
                 }
 

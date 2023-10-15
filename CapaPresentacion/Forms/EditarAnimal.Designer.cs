@@ -30,6 +30,7 @@
         {
             this.labelTituloEditar = new System.Windows.Forms.Label();
             this.tlpDatosUsuario = new System.Windows.Forms.TableLayoutPanel();
+            this.labelEditarCelda = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButtonNoVacunadoEditar = new System.Windows.Forms.RadioButton();
             this.radioButtonSiVacunadoEditar = new System.Windows.Forms.RadioButton();
@@ -42,9 +43,8 @@
             this.groupBoxRadioButtonGenero = new System.Windows.Forms.GroupBox();
             this.radioButtonAnimalHembraEditar = new System.Windows.Forms.RadioButton();
             this.radioButtonAnimalMachoEditar = new System.Windows.Forms.RadioButton();
-            this.labelInfoEditar = new System.Windows.Forms.Label();
-            this.labelEditarCelda = new System.Windows.Forms.Label();
             this.textBoxEditarCelda = new System.Windows.Forms.TextBox();
+            this.labelInfoEditar = new System.Windows.Forms.Label();
             this.buttonEditarAnimal = new System.Windows.Forms.Button();
             this.buttonVolverEditar = new System.Windows.Forms.Button();
             this.tlpDatosUsuario.SuspendLayout();
@@ -90,6 +90,17 @@
             this.tlpDatosUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tlpDatosUsuario.Size = new System.Drawing.Size(1510, 491);
             this.tlpDatosUsuario.TabIndex = 8;
+            // 
+            // labelEditarCelda
+            // 
+            this.labelEditarCelda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelEditarCelda.AutoSize = true;
+            this.labelEditarCelda.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEditarCelda.Location = new System.Drawing.Point(3, 423);
+            this.labelEditarCelda.Name = "labelEditarCelda";
+            this.labelEditarCelda.Size = new System.Drawing.Size(464, 37);
+            this.labelEditarCelda.TabIndex = 11;
+            this.labelEditarCelda.Text = "Cambiar celda del animal:";
             // 
             // groupBox1
             // 
@@ -226,27 +237,6 @@
             this.radioButtonAnimalMachoEditar.Text = "Macho";
             this.radioButtonAnimalMachoEditar.UseVisualStyleBackColor = true;
             // 
-            // labelInfoEditar
-            // 
-            this.labelInfoEditar.AutoSize = true;
-            this.labelInfoEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInfoEditar.Location = new System.Drawing.Point(44, 173);
-            this.labelInfoEditar.Name = "labelInfoEditar";
-            this.labelInfoEditar.Size = new System.Drawing.Size(919, 37);
-            this.labelInfoEditar.TabIndex = 9;
-            this.labelInfoEditar.Text = "Deje el campo de texto en blanco para no realizar canbios en el";
-            // 
-            // labelEditarCelda
-            // 
-            this.labelEditarCelda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelEditarCelda.AutoSize = true;
-            this.labelEditarCelda.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEditarCelda.Location = new System.Drawing.Point(3, 423);
-            this.labelEditarCelda.Name = "labelEditarCelda";
-            this.labelEditarCelda.Size = new System.Drawing.Size(464, 37);
-            this.labelEditarCelda.TabIndex = 11;
-            this.labelEditarCelda.Text = "Cambiar celda del animal:";
-            // 
             // textBoxEditarCelda
             // 
             this.textBoxEditarCelda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -256,6 +246,16 @@
             this.textBoxEditarCelda.Name = "textBoxEditarCelda";
             this.textBoxEditarCelda.Size = new System.Drawing.Size(1040, 44);
             this.textBoxEditarCelda.TabIndex = 12;
+            // 
+            // labelInfoEditar
+            // 
+            this.labelInfoEditar.AutoSize = true;
+            this.labelInfoEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelInfoEditar.Location = new System.Drawing.Point(44, 173);
+            this.labelInfoEditar.Name = "labelInfoEditar";
+            this.labelInfoEditar.Size = new System.Drawing.Size(919, 37);
+            this.labelInfoEditar.TabIndex = 9;
+            this.labelInfoEditar.Text = "Deje el campo de texto en blanco para no realizar canbios en el";
             // 
             // buttonEditarAnimal
             // 
@@ -290,7 +290,7 @@
             this.Controls.Add(this.tlpDatosUsuario);
             this.Controls.Add(this.labelTituloEditar);
             this.Name = "EditarAnimal";
-            this.Text = "EditarAnimal";
+            this.Text = "Editar animales";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EditarAnimal_FormClosing);
             this.tlpDatosUsuario.ResumeLayout(false);
             this.tlpDatosUsuario.PerformLayout();

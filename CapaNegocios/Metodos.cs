@@ -17,6 +17,7 @@ namespace CapaNegocios
         Conexion capadatos = new Conexion();
         String estadoConexion;
 
+
         public String AlternarConexion(bool abrir)
         {
 
@@ -82,14 +83,29 @@ namespace CapaNegocios
         public bool VerificarUsuario(TextBox txtboxUsuario, TextBox txtClave)
         {
 
-            if (capadatos.BuscarUsuario(txtboxUsuario.Text, txtClave.Text))
+
+            string claveUsuario = Encriptacion.Encrypt(txtClave.Text);
+            string[] usuario = capadatos.BuscarUsuario(txtboxUsuario.Text, claveUsuario);
+
+            if (
+                usuario[0] != string.Empty &&
+                usuario[1] != string.Empty)
             {
-                return true;
+
+                if (claveUsuario == usuario[1])
+                {
+                    return true;
+                }
+                else { return false; }
+
+
             }
             else
             {
                 return false;
             }
+
+
 
         }
 
@@ -169,6 +185,12 @@ namespace CapaNegocios
 
 
         }
+
+
+
+
+
+
 
     }
 }

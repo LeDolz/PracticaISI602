@@ -20,8 +20,6 @@ namespace CapaPresentacion
             InitializeComponent();
             CentrarTitulo(labelBienvenido, this);
             buttonIngresar.Left = (ClientSize.Width - buttonIngresar.Width) / 2;
-            textBoxContrasenia.UseSystemPasswordChar = true;
-            textBoxContrasenia.PasswordChar = '*';
 
 
             //verificar conexion
@@ -44,7 +42,7 @@ namespace CapaPresentacion
                 Metodos.MostrarError("Usuario o clave incorrecta");
             }
 
-            LimpiarTextBoxes();
+            //LimpiarTextBoxes();
         }
 
         public static void CentrarTitulo(Label label, Form form)

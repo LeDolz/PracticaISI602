@@ -192,7 +192,7 @@
             this.Controls.Add(this.labelTituloControl);
             this.Controls.Add(this.buttonVolverControl);
             this.Name = "ControlAnimal";
-            this.Text = "ControlMascotas";
+            this.Text = "Control de animales";
             this.Activated += new System.EventHandler(this.ControlAnimal_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ControlMascotas_FormClosing);
             this.Load += new System.EventHandler(this.ControlAnimal_Load);
