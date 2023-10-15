@@ -35,6 +35,7 @@ namespace CapaNegocios
 
         }
 
+
         public void EliminarAnimalDeCelda(DataGridView dgv)
         {
             if (dgv.SelectedCells.Count>0)
@@ -57,6 +58,13 @@ namespace CapaNegocios
             }
 
             this.AplicarDatosDGV(dgv);
+        }
+
+        public string ActualizarDatosAnimal(int id, TextBox txtEspecie, DateTimePicker fecha, string genero, bool vacunado, TextBox celda)
+        {
+
+            return capadatos.ActualizarAnimal(id, txtEspecie.Text, fecha.Value, genero, vacunado, celda.Text);
+
         }
 
         public void BuscarAnimal(TextBox cuadroBusqueda, DataGridView dgv)
@@ -186,9 +194,39 @@ namespace CapaNegocios
 
         }
 
+        //gets dgv 
 
 
+        public string getIdSeleccionadaDgv(DataGridView dgv, int celda)
+        {
 
+            if (dgv.SelectedCells.Count > 0)
+            {
+
+                DataGridViewCell celdaSeleccionada = dgv.SelectedCells[0];
+                DataGridViewRow filaSeleccionada = dgv.Rows[celdaSeleccionada.RowIndex];
+
+                object valorCelda = filaSeleccionada.Cells[celda].Value;
+
+                if (valorCelda != null)
+                {
+                    return valorCelda.ToString();
+                }
+                else
+                {
+                    MostrarError("No hay celda seleccionada");
+                    return "No hay celda seleccionada";
+                }
+
+
+            }
+            else
+            {
+                MostrarError("No hay celda seleccionada");
+                return "No hay celda seleccionada";
+            }
+
+        }
 
 
 

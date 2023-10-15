@@ -219,10 +219,10 @@
             this.radioButtonAnimalHembraEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonAnimalHembraEditar.Location = new System.Drawing.Point(354, 35);
             this.radioButtonAnimalHembraEditar.Name = "radioButtonAnimalHembraEditar";
-            this.radioButtonAnimalHembraEditar.Size = new System.Drawing.Size(149, 41);
+            this.radioButtonAnimalHembraEditar.Size = new System.Drawing.Size(177, 41);
             this.radioButtonAnimalHembraEditar.TabIndex = 1;
             this.radioButtonAnimalHembraEditar.TabStop = true;
-            this.radioButtonAnimalHembraEditar.Text = "Hembra";
+            this.radioButtonAnimalHembraEditar.Text = "Femenino";
             this.radioButtonAnimalHembraEditar.UseVisualStyleBackColor = true;
             // 
             // radioButtonAnimalMachoEditar
@@ -231,10 +231,10 @@
             this.radioButtonAnimalMachoEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonAnimalMachoEditar.Location = new System.Drawing.Point(67, 37);
             this.radioButtonAnimalMachoEditar.Name = "radioButtonAnimalMachoEditar";
-            this.radioButtonAnimalMachoEditar.Size = new System.Drawing.Size(131, 41);
+            this.radioButtonAnimalMachoEditar.Size = new System.Drawing.Size(179, 41);
             this.radioButtonAnimalMachoEditar.TabIndex = 0;
             this.radioButtonAnimalMachoEditar.TabStop = true;
-            this.radioButtonAnimalMachoEditar.Text = "Macho";
+            this.radioButtonAnimalMachoEditar.Text = "Masculino";
             this.radioButtonAnimalMachoEditar.UseVisualStyleBackColor = true;
             // 
             // textBoxEditarCelda
@@ -266,6 +266,7 @@
             this.buttonEditarAnimal.TabIndex = 10;
             this.buttonEditarAnimal.Text = "Confirmar cambios";
             this.buttonEditarAnimal.UseVisualStyleBackColor = true;
+            this.buttonEditarAnimal.Click += new System.EventHandler(this.buttonEditarAnimal_Click);
             // 
             // buttonVolverEditar
             // 

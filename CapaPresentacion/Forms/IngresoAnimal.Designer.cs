@@ -240,10 +240,10 @@
             this.radioButtonAnimalHembraIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonAnimalHembraIngreso.Location = new System.Drawing.Point(354, 35);
             this.radioButtonAnimalHembraIngreso.Name = "radioButtonAnimalHembraIngreso";
-            this.radioButtonAnimalHembraIngreso.Size = new System.Drawing.Size(149, 41);
+            this.radioButtonAnimalHembraIngreso.Size = new System.Drawing.Size(177, 41);
             this.radioButtonAnimalHembraIngreso.TabIndex = 1;
             this.radioButtonAnimalHembraIngreso.TabStop = true;
-            this.radioButtonAnimalHembraIngreso.Text = "Hembra";
+            this.radioButtonAnimalHembraIngreso.Text = "Femenino";
             this.radioButtonAnimalHembraIngreso.UseVisualStyleBackColor = true;
             // 
             // radioButtonAnimalMachoIngreso
@@ -252,10 +252,10 @@
             this.radioButtonAnimalMachoIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonAnimalMachoIngreso.Location = new System.Drawing.Point(67, 37);
             this.radioButtonAnimalMachoIngreso.Name = "radioButtonAnimalMachoIngreso";
-            this.radioButtonAnimalMachoIngreso.Size = new System.Drawing.Size(131, 41);
+            this.radioButtonAnimalMachoIngreso.Size = new System.Drawing.Size(179, 41);
             this.radioButtonAnimalMachoIngreso.TabIndex = 0;
             this.radioButtonAnimalMachoIngreso.TabStop = true;
-            this.radioButtonAnimalMachoIngreso.Text = "Macho";
+            this.radioButtonAnimalMachoIngreso.Text = "Masculino";
             this.radioButtonAnimalMachoIngreso.UseVisualStyleBackColor = true;
             // 
             // buttonIngresarAnimal

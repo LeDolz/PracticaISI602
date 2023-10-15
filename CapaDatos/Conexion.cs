@@ -126,6 +126,48 @@ namespace CapaDatos
 
         }
 
+        public string ActualizarAnimal(int id, string especie, DateTime fechaIngreso, string genero, bool vacunado, string celda)
+        {
+
+            string sqlActualizarAnimal = "UPDATE Mascotas SET " +
+                "especie = @especie, fechaIngreso = @fechaIngreso, genero = @genero, vacunado = @vacunado, celda = @celda" +
+                " WHERE id = @id;";
+
+            using (SqlCommand comandoActualizar = new SqlCommand(sqlActualizarAnimal, conexionSql))
+            {
+                this.AbrirConexion();
+                try
+                {
+                    comandoActualizar.Parameters.AddWithValue("@id", id);
+                    comandoActualizar.Parameters.AddWithValue("@especie", especie);
+                    comandoActualizar.Parameters.AddWithValue("@fechaIngreso", fechaIngreso);
+                    comandoActualizar.Parameters.AddWithValue("@genero", genero);
+                    comandoActualizar.Parameters.AddWithValue("@vacunado", vacunado);
+                    comandoActualizar.Parameters.AddWithValue("@celda", celda);
+
+                    int filasAfectadas = comandoActualizar.ExecuteNonQuery();
+                    this.CerrarConexion();
+                    if (filasAfectadas > 0)
+                    {
+                        return "Se ha actualizado el animal";
+                    }
+                    else
+                    {
+                        return "No se ha podido actualizar el animal";
+                    }
+
+                }catch (Exception ex)
+                {
+                    return ex.Message;
+                }
+
+            }
+
+
+        }
+
+
+
         public string EliminarAnimal(string id)
         {
 
@@ -179,13 +221,10 @@ namespace CapaDatos
 
                 }
 
-
-
             }
             
-
-
         }
+
 
 
     }

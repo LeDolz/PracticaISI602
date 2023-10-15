@@ -27,9 +27,6 @@ namespace CapaPresentacion.Forms
             capaNegocios.VolverFormAnterior(ventanaAnterior, this);
         }
 
-
-
-
         private void ControlMascotas_FormClosing(object sender, FormClosingEventArgs e)
         {
             ventanaAnterior.Visible=true;
@@ -44,15 +41,38 @@ namespace CapaPresentacion.Forms
 
         private void buttonEditar_Click(object sender, EventArgs e)
         {
+
+            int id = int.Parse(capaNegocios.getIdSeleccionadaDgv(dgvAnimales, 0));
+            string nuevaEspecie = capaNegocios.getIdSeleccionadaDgv(dgvAnimales, 1);
+            DateTime nuevaFechaIngreso = DateTime.Parse(capaNegocios.getIdSeleccionadaDgv(dgvAnimales, 2));
+            string nuevoGenero = capaNegocios.getIdSeleccionadaDgv(dgvAnimales, 3);
+            bool nuevaVacunacion = bool.Parse(capaNegocios.getIdSeleccionadaDgv(dgvAnimales, 4));
+            string celdaAnimal = capaNegocios.getIdSeleccionadaDgv(dgvAnimales, 5);
+
+
             try
             {
-                EditarAnimal ventanaEditar = new EditarAnimal(this, "MEME", new DateTime(1992, 3, 21), "H", true);
+
+
+                EditarAnimal ventanaEditar = new EditarAnimal(this, 
+                    id,
+                    nuevaEspecie,
+                    nuevaFechaIngreso,
+                    nuevoGenero,
+                    nuevaVacunacion,
+                    celdaAnimal
+                    );
+
+
+
                 this.Visible = false;
                 ventanaEditar.Visible = true;
+                
 
                 //TODO: traer datos del data grid view
             }
-            catch { }
+            catch {  }
+            
 
         }
 

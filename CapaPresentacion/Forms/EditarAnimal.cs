@@ -15,29 +15,34 @@ namespace CapaPresentacion.Forms
     {
         Form ventanaAnterior = null;
         Metodos capaDatos = new Metodos();
+        int id;
 
-        public EditarAnimal(Form ventanaAnterior, String especieAnimal, DateTime fechaIngreso, String generoAnimal, bool vacunacionAnimal)
+
+        public EditarAnimal(Form ventanaAnterior, int id, String especieAnimal, DateTime fechaIngreso, String generoAnimal, bool vacunacionAnimal, string celdaAnimal)
         {
             InitializeComponent();
             this.ventanaAnterior = ventanaAnterior;
             Login.CentrarTitulo(labelTituloEditar, this);
+            this.id = id;
 
-            cargarDatos(especieAnimal, fechaIngreso, generoAnimal, vacunacionAnimal);
+            cargarDatos(especieAnimal, fechaIngreso, generoAnimal, vacunacionAnimal, celdaAnimal);
 
-            //cambiar fecha del date time picker
-            //this.dateTimePickerEditarVacunacion.Value = new DateTime(2020, 4, 24);
+
         }
 
-        private void cargarDatos(string especieAnimal, DateTime fechaIngreso, string generoAnimal, bool vacunacionAnimal)
+        private void cargarDatos(string especieAnimal, DateTime fechaIngreso, string generoAnimal, bool vacunacionAnimal, string celdaAnimal)
         {
+
             this.textBoxEditarEspecieAnimal.Text = especieAnimal;
             this.dateTimePickerEditarVacunacion.Value = fechaIngreso;
 
-            if (generoAnimal.ToLower() == "h") { this.radioButtonAnimalHembraEditar.Checked = true; }
+            if (generoAnimal.ToLower() == "f") { this.radioButtonAnimalHembraEditar.Checked = true; }
             else if (generoAnimal.ToLower() == "m") { this.radioButtonAnimalMachoEditar.Checked = true; }
 
             if (vacunacionAnimal) { this.radioButtonSiVacunadoEditar.Checked = true; }
             else { this.radioButtonNoVacunadoEditar.Checked = true; }
+
+            this.textBoxEditarCelda.Text = celdaAnimal;
 
         }
 
@@ -52,6 +57,27 @@ namespace CapaPresentacion.Forms
             capaDatos.VolverFormAnterior(ventanaAnterior, this);
             //TODO: Volver a la ventana anterior
 
+        }
+
+        private void buttonEditarAnimal_Click(object sender, EventArgs e)
+        {
+            string genero = (radioButtonAnimalMachoEditar.Checked) ? "M" : "F";
+
+
+            string resultado = capaDatos.ActualizarDatosAnimal(
+                    this.id,
+                    textBoxEditarEspecieAnimal,
+                    dateTimePickerEditarVacunacion,
+                    genero,
+                    radioButtonSiVacunadoEditar.Checked,
+                    textBoxEditarCelda
+                );
+
+
+
+
+
+            Metodos.MostrarError(resultado);
         }
     }
 }
