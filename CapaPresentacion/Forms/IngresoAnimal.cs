@@ -39,21 +39,42 @@ namespace CapaPresentacion.Forms
             //test ingreso
 
 
-            string genero = (radioButtonAnimalMachoIngreso.Checked) ? "M" : "F";
+ 
+
+            if (!radioButtonAnimalHembraIngreso.Checked && !radioButtonAnimalMachoIngreso.Checked ||
+                !radioButtonNoVacunadoIngreso.Checked && !radioButtonSiVacunadoIngreso.Checked)
+            {
+                if (!radioButtonAnimalHembraIngreso.Checked && !radioButtonAnimalMachoIngreso.Checked)
+                {
+                    Metodos.MostrarError("Seleccione un género para el animal.");
+                }
+                else
+                {
+                    Metodos.MostrarError("Seleccione un estado de vacunación.");
+                }
 
 
-            Metodos metodos = new Metodos();
-            string resultado = metodos.VerificarIngresoAnimal(
-                    this.textBoxIngresoEspecieAnimal.Text,
-                    genero,
-                    this.textBoxIngresoCelda.Text,
-                    this.dateTimePickerIngresoVacunacion.Value,
-                    this.radioButtonSiVacunadoIngreso.Checked
-                );
+            }
+            else
+            {
+
+                string genero = (radioButtonAnimalMachoIngreso.Checked) ? "M" : "F";
+
+                Metodos metodos = new Metodos();
+                string resultado = metodos.VerificarIngresoAnimal(
+                        this.textBoxIngresoEspecieAnimal.Text,
+                        genero,
+                        this.textBoxIngresoCelda.Text,
+                        this.dateTimePickerIngresoVacunacion.Value,
+                        this.radioButtonSiVacunadoIngreso.Checked
+                    );
 
 
 
-            Metodos.MostrarError(resultado);
+                Metodos.MostrarError(resultado);
+            }
+
+            
             
         }
 
