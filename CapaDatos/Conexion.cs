@@ -10,10 +10,10 @@ namespace CapaDatos
 {
     public class Conexion
     {
+        //                                     Cambiar el nombre del servidor\
+        private static string nombreServidor = "DOLZONARO\\SQLEXPRESS";
+        private SqlConnection conexionSql = new SqlConnection($"Server={nombreServidor}; Database=RefugioMascotas; Integrated Security=True;");
 
-        //private string cadenaConexion = "Server=DOLZONARO\\SQLEXPRESS;Database=RefugioMascotas;Integrated Security=True;";
-        private SqlConnection conexionSql = new SqlConnection("Server=DOLZONARO\\SQLEXPRESS;Database=RefugioMascotas;Integrated Security=True;");
-        //private string mensajeError = "Error";
 
         public string AbrirConexion()
         {
